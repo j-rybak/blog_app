@@ -1,0 +1,12 @@
+extends ../layouts/base
+
+block content
+    a.btn.btn-success(href='/posts/add')
+        i.fa.fa-plus
+        |  Dodaj
+    h2 Wpisy strona #{currentPage} z #{lastPage}
+    .well.well-sm
+        include partials/pagination
+    include partials/posts_list
+    .well.well-sm
+        include partials/pagination

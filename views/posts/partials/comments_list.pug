@@ -1,0 +1,14 @@
+each comment in comments
+    .well.well-sm
+        p
+            | !{comment.content}
+        p
+            i.fa.fa-pencil
+            |  #{comment.owner.username}&nbsp;
+            i.fa.fa-calendar
+            |  #{moment(comment.createdAt).format("Do MMMM YYYY HH:mm:ss")}
+
+
+if(comments.length == 0)
+    .well.well-sm.text-center
+        | Brak komentarzy

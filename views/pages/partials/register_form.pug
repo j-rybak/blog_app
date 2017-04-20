@@ -1,0 +1,19 @@
+form(action="/auth/register" method="post")
+    div.form-group
+        label.form-label(for="username")
+            | Nazwa użytkownika
+        input.form-control#username(type="text" name="username" required=true)
+    div.form-group
+        label.form-label(for="email")
+            | Email
+        input.form-control#email(type="email" name="email" required=true)
+    div.form-group
+        label.form-label(for="password")
+            | Hasło
+        input.form-control#password(type="password" name="password" required=true)
+    div.form-group
+        label.form-label(for="passwordConfirm")
+            | Powtórz hasło
+        input.form-control#passwordConfirm(type="password" name="passwordConfirm" required=true)
+    div.form-group
+        input.form-control.btn.btn-success(type="submit" value="Zarejestruj się")

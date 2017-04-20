@@ -1,0 +1,21 @@
+.well.well-sm
+    if(user._id.equals(post.owner._id))
+        a.btn.btn-success(href='/posts/'+post._id+'/edit')
+            i.fa.fa-pencil
+            |  Edytuj
+    if(user.admin)
+        a.btn.btn-danger(href='/posts/'+post._id+'/remove')
+            i.fa.fa-trash
+            |  Usuń
+    if(post.image)
+        .thumbnail
+            img(src=post.image, class="img-responsive")
+    p
+        | !{post.content}
+    p
+        i.fa.fa-pencil
+        |  #{post.owner.username}&nbsp;
+        i.fa.fa-calendar
+        |  #{moment(post.createdAt).format("Do MMMM YYYY HH:mm:ss")}
+        if(post._v)
+            | Edytowany

@@ -1,0 +1,12 @@
+extends ../layouts/base
+
+block content
+    include partials/post_detail
+
+    h5 Komentarze
+    include partials/comments_list
+
+    h5 Napisz komentarz
+    .row
+        .col-xs-12.col-md-4.col-md-offset-4
+            include partials/comment_form

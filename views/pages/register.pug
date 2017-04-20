@@ -1,0 +1,11 @@
+extends ../layouts/base
+
+block content
+    .row
+        .col-xs-12.col-md-4.col-md-offset-4
+            if email
+                include partials/register_successful
+            else
+                include partials/register_form
+                p Masz już konto?
+                a(href='/auth/login') Zaloguj się

@@ -1,0 +1,8 @@
+form(action="/posts/"+post._id+"/comment" method="post")
+    div.form-group
+        label.form-label(for="content")
+            | Treść komentarza
+        textarea#content.form-control( name="content" required=true)
+    div.form-group
+        input.form-control.btn.btn-success(type="submit" value="Napisz")
+

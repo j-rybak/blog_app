@@ -1,0 +1,6 @@
+each messagesList, type in messages
+    each message in messagesList
+        .alert.alert-dismissible(role="alert",class='alert-'+type)
+            button.close(type="button",data-dismiss="alert" aria-label="Close")
+                span(aria-hidden="true")  &times;
+            = message

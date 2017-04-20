@@ -1,0 +1,9 @@
+extends ../layouts/base
+
+block content
+    .row
+        .col-xs-12.col-md-4.col-md-offset-4
+            include partials/login_form
+
+            p Nie posiadasz konta?
+            a(href='/auth/register') Zarejestruj się

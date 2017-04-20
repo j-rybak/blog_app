@@ -1,0 +1,7 @@
+nav(aria-label='Pagination')
+    ul.pagination
+        - var page=1
+        while page <= lastPage
+            li.page-item(class=(page==currentPage ? 'active':''))
+                a.page-link(href='/posts?page='+page) #{page++}
+

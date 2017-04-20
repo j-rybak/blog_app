@@ -1,0 +1,17 @@
+form(action=action method="post")
+    div.form-group
+        label.form-label(for="title")
+            | Tytuł
+        input#title.form-control(type="text" name="title" required=true, value=post.title)
+    div.form-group
+        label.form-label(for="image")
+            | Obraz
+        input#image.form-control(type="text" name="image",value=post.image)
+    div.form-group
+        label.form-label(for="content")
+            | Treść postu
+        textarea#content.form-control( name="content" required=true)
+            | #{post.content}
+    div.form-group
+        input.form-control.btn.btn-success(type="submit" value="Napisz")
+
