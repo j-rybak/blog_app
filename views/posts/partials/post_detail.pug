@@ -13,9 +13,10 @@
     p
         | !{post.content}
     p
-        i.fa.fa-pencil
+        i.fa.fa-user
         |  #{post.owner.username}&nbsp;
         i.fa.fa-calendar
-        |  #{moment(post.createdAt).format("Do MMMM YYYY HH:mm:ss")}
-        if(post._v)
-            | Edytowany
+        |  #{moment(post.createdAt).format("Do MMMM YYYY HH:mm:ss")}&nbsp;
+        if(post.updatedAt!=post.createdAt)
+        i.fa.fa-pencil
+        |  #{moment(post.updatedAt).format("Do MMMM YYYY HH:mm:ss")}

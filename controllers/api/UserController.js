@@ -48,10 +48,10 @@ module.exports = {
      */
     create: function (req, res) {
         var User = new UserModel({
-			username : req.body.username,
-            email : req.body.email,
-			active : req.body.active,
-			admin : req.body.admin
+            username: req.body.username,
+            email: req.body.email,
+            active: req.body.active,
+            admin: req.body.admin
         });
 
         User.setPassword(req.body.password);
@@ -86,10 +86,10 @@ module.exports = {
             }
 
             User.username = req.body.username ? req.body.username : User.username;
-            User.password = req.body.password ? User.setPassword(req.body.password): User.password;
+            User.password = req.body.password ? User.setPassword(req.body.password) : User.password;
             User.email = req.body.email ? req.body.email : User.email;
-			User.active = req.body.active ? req.body.active : User.active;
-			User.admin = req.body.admin ? req.body.admin : User.admin;
+            User.active = req.body.active ? req.body.active : User.active;
+            User.admin = req.body.admin ? req.body.admin : User.admin;
 
 
             User.save(function (err, User) {

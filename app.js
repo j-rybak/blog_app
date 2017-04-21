@@ -18,7 +18,7 @@ var commentsApi = require('./routes/api/PostRoutes');
 
 var app = express();
 
-var db = require('./utils/dbInit');
+var db = require('./utils/dbSettings');
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
@@ -44,6 +44,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.locals.moment = require('moment');
 app.locals.moment.locale('pl');
 
+
+
 //Middleware for displaying user info
 app.use(function (req, res, next) {
     res.locals.authenticated = req.isAuthenticated();
@@ -66,6 +68,14 @@ app.use(function (req, res, next) {
     next();
 });
 
+//Middleware for checking db connection
+app.use(function (req, res, next) {
+    if(!db.connection.readyState){
+        console.error('Database error when accessing '+req.url);
+        next(new Error('Błąd połączenia z bazą danych'));
+    }
+    next();
+});
 //WEBSITE ROUTES
 app.use('/', pages);
 app.use('/auth', auth);

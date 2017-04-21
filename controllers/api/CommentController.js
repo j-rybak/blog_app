@@ -48,9 +48,9 @@ module.exports = {
      */
     create: function (req, res) {
         var Comment = new CommentModel({
-			content : req.body.content,
-			post : req.body.post,
-			owner : req.body.owner
+            content: req.body.content,
+            post: req.body.post,
+            owner: req.body.owner
         });
 
         Comment.save(function (err, Comment) {
@@ -82,10 +82,10 @@ module.exports = {
                 });
             }
 
-			Comment.content = req.body.content ? req.body.content : Comment.content;
-			Comment.post = req.body.post ? req.body.post : Comment.post;
-			Comment.owner = req.body.owner ? req.body.owner : Comment.owner;
-			
+            Comment.content = req.body.content ? req.body.content : Comment.content;
+            Comment.post = req.body.post ? req.body.post : Comment.post;
+            Comment.owner = req.body.owner ? req.body.owner : Comment.owner;
+
             Comment.save(function (err, Comment) {
                 if (err) {
                     return res.status(500).json({

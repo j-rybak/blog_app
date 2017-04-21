@@ -6,9 +6,8 @@ each post in posts
         h3
             a(href=post.detailUrl(host))= post.title
         p
-            if(post.owner)
-                i.fa.fa-pencil
-                |  #{post.owner.username}&nbsp;
+            i.fa.fa-user
+            |  #{post.owner.username}&nbsp;
             i.fa.fa-calendar
             |  #{moment(post.createdAt).format("Do MMMM YYYY HH:mm:ss")}
 
