@@ -12,7 +12,7 @@ module.exports = {
      * AuthController.register()
      */
     loginPage: function(req, res, next) {
-        res.render('pages/login', { title: 'Zaloguj'});
+        res.render('auth/login', { title: 'Zaloguj'});
     },
 
     login: passport.authenticate('login', {
@@ -23,7 +23,7 @@ module.exports = {
     }),
 
     registerPage: function(req, res, next) {
-        res.render('pages/register', { title: 'Zarejestruj się'});
+        res.render('auth/register', { title: 'Zarejestruj się'});
     },
 
     register: function (req, res, next) {
@@ -66,7 +66,7 @@ module.exports = {
                                 });
                                 res.redirect('/auth/register');
                             }
-                            res.render('pages/register', { title: 'Zarejestruj się', email:User.email});
+                            res.render('auth/register', { title: 'Zarejestruj się', email:User.email});
                         });
                     });
                 }
