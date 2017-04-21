@@ -1,12 +1,10 @@
 var mongoose = require('mongoose');
 
 //var dbURI = 'mongodb://localhost/blog_v2';
-var dbURI = 'mongodb://ds047935.mlab.com:47935/blog_app';
+var dbURI = 'mongodb://blog_app:xyX#-WBTk7Vqy47J@ds047935.mlab.com:47935/blog_app';
 
 var options = {
     server: {reconnectTries: 100, auto_reconnect: true},
-    user: 'blog_app',
-    pass: 'xyX#-WBTk7Vqy47J'
 };
 
 mongoose.connect(dbURI, options);

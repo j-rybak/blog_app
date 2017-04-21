@@ -18,9 +18,6 @@ module.exports = {
                 req.flash('warning', 'Strona o numerze ' + page + ' nie istnieje');
                 res.redirect('/posts')
             }
-            if (Posts.total == 0) {
-                req.flash('warning', 'Brak wpisów - dodaj wpis jako pierwszy!');
-            }
             res.render('posts/list', {title: 'Blog', posts: Posts.docs, currentPage: page, lastPage: Posts.pages});
         });
 

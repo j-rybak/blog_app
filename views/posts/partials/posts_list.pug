@@ -12,3 +12,6 @@ each post in posts
             |  #{moment(post.createdAt).format("Do MMMM YYYY HH:mm:ss")}
 
 
+if(!posts.length)
+    .well.well-sm.text-center
+        | Brak wpisów
