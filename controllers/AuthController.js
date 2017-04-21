@@ -1,6 +1,6 @@
 var UserModel = require('../models/UserModel.js');
 var mail = require('../utils/mails');
-var passport = require('../utils/PassportInit');
+var passport = require('../utils/passportSettings');
 /**
  * AuthController.js
  *

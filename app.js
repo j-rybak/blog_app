@@ -7,7 +7,7 @@ var bodyParser = require('body-parser');
 var session = require('express-session');
 var flash = require('connect-flash');
 
-var passport = require('./utils/PassportInit');
+var passport = require('./utils/passportSettings');
 
 var pages = require('./routes/PagesRoutes');
 var auth = require('./routes/AuthRoutes');
