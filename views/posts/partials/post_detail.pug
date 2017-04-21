@@ -17,6 +17,6 @@
         |  #{post.owner.username}&nbsp;
         i.fa.fa-calendar
         |  #{moment(post.createdAt).format("Do MMMM YYYY HH:mm:ss")}&nbsp;
-        if(!post.updatedAt.equals(post.createdAt))
-        i.fa.fa-pencil
-        |  #{moment(post.updatedAt).format("Do MMMM YYYY HH:mm:ss")}
+        if(moment(post.updatedAt).isAfter(post.createdAt))
+            i.fa.fa-pencil
+            |  #{moment(post.updatedAt).format("Do MMMM YYYY HH:mm:ss")}
