@@ -1,3 +1,4 @@
+
 module.exports = {
     loggedIn: function (req, res, next) {
         if (req.user) {

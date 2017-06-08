@@ -1,0 +1,17 @@
+<!--<formly-form name="form" model="item" fields="resourceConfig.fields">-->
+    <!--<button type="submit" class="btn btn-primary" ng-click="">Zapisz</button>-->
+<!--</formly-form>-->
+
+<form ng-submit="submit()" name="form" novalidate>
+    <formly-form model="item" fields="resourceConfig.fields" form="form">
+        <button type="submit" class="btn btn-primary submit-button"><i class="fa fa-save"></i> Zapisz</button>
+        <a href="" class="btn btn-danger" title="Usuń" ng-click="remove()" ng-if="item._id"><i class="fa fa-trash"></i> Usuń</a>
+    </formly-form>
+</form>
+
+<script type="text/ng-template" id="error-messages.html">
+    <formly-transclude></formly-transclude>
+    <div ng-messages="fc.$error" ng-if="form.$submitted || options.formControl.$touched" class="error-messages">
+        <div ng-message="{{ ::name }}" ng-repeat="(name, message) in ::options.validation.messages" class="message">{{ message(fc.$viewValue, fc.$modelValue, this)}}</div>
+    </div>
+</script>

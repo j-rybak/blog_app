@@ -86,7 +86,7 @@ module.exports = {
             }
 
             User.username = req.body.username ? req.body.username : User.username;
-            User.password = req.body.password ? User.setPassword(req.body.password) : User.password;
+            if(req.body.password) User.setPassword(req.body.password);
             User.email = req.body.email ? req.body.email : User.email;
             User.active = req.body.active ? req.body.active : User.active;
             User.admin = req.body.admin ? req.body.admin : User.admin;

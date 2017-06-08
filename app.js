@@ -14,7 +14,8 @@ var auth = require('./routes/AuthRoutes');
 var posts = require('./routes/PostsRoutes');
 var usersApi = require('./routes/api/UserRoutes');
 var postsApi = require('./routes/api/PostRoutes');
-var commentsApi = require('./routes/api/PostRoutes');
+var commentsApi = require('./routes/api/CommentRoutes');
+var dashboardApi = require('./routes/api/DashboardRoutes');
 
 var app = express();
 
@@ -41,6 +42,7 @@ app.use(flash());
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use('/admin_app',express.static(path.join(__dirname, 'admin')));
 app.locals.moment = require('moment');
 app.locals.moment.locale('pl');
 
@@ -83,6 +85,7 @@ app.use('/posts', posts);
 
 
 //API ROUTES
+app.use('/api/dashboard', dashboardApi);
 app.use('/api/users', usersApi);
 app.use('/api/posts', postsApi);
 app.use('/api/comments', commentsApi);

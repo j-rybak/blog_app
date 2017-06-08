@@ -34,6 +34,11 @@ nav.navbar.navbar-inverse.navbar-fixed-top
                         a(href='/auth/logout')
                             icon.fa.fa-power-off
                             |  Wyloguj
+                    if user.admin
+                        li
+                            a(href='/admin')
+                                icon.fa.fa-cog
+                                |  Admin panel
                 else
 
                     li(class=url.indexOf('login')!=-1? "active" : "")

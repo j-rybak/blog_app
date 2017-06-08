@@ -1,0 +1,6 @@
+<icon-checkbox ng-if="type==='bool'" value="value"></icon-checkbox>
+<span ng-bind="value | date: 'MMM d, y HH:mm:ss'" ng-if="format==='date'"></span>
+<span ng-bind="value | hidePassword" ng-if="format==='password'"></span>
+<a ng-href="{{link}}" ng-bind="value" ng-if="format==='link'"></a>
+<img ng-src="{{value}}" ng-if="format==='image'" style="height:50px;width:auto">
+<span ng-bind="value" ng-if="format==='text'" ></span>

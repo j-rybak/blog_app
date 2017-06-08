@@ -1,0 +1,11 @@
+<div class="row">
+    <div class="col-sm-12" id="base-chart" ng-controller="ChartCtrl">
+        <div class="panel panel-default">
+            <div class="panel-heading">Podsumowanie</div>
+            <div class="panel-body">
+            <canvas id="base" class="chart chart-base" chart-type="dynamic.type" data="dynamic.data" labels="dynamic.labels" legend="true"></canvas>
+            </div>
+        </div>
+        <button type="button" class="btn btn-primary pull-right" ng-click="dynamic.toggle()">Zmień wykres</button>
+    </div>
+</div>

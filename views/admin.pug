@@ -1,0 +1,72 @@
+doctype html
+html.no-js
+    head
+        meta(charset='utf-8')
+        title="Panel administracyjny"
+        meta(name='description', content='')
+        meta(name='viewport', content='width=device-width')
+        link(rel='stylesheet', href='/admin_app/bower_components/bootstrap/dist/css/bootstrap.min.css')
+        link(rel='stylesheet', href='/admin_app/styles/main.css')
+        link(rel='stylesheet', href='/admin_app/styles/sb-admin-2.css')
+        link(rel='stylesheet', href='/admin_app/styles/timeline.css')
+        link(rel='stylesheet', href='/admin_app/bower_components/metisMenu/dist/metisMenu.min.css')
+        link(rel='stylesheet', href='/admin_app/bower_components/angular-loading-bar/build/loading-bar.min.css')
+        link(rel='stylesheet', href='/admin_app/bower_components/font-awesome/css/font-awesome.min.css', type='text/css')
+    body
+        div(ng-app='admin')
+            #wrapper
+                // Navigation
+                header
+                // /.navbar-top-links
+                // /.navbar-static-side
+                #page-wrapper(style='min-height: 561px;')
+                    div(ui-view='')
+                // /#page-wrapper
+        script(src='/admin_app/bower_components/jquery/dist/jquery.min.js')
+        script(src='/admin_app/bower_components/angular/angular.min.js')
+        script(src='/admin_app/bower_components/angular-ui-router/release/angular-ui-router.min.js')
+        script(src='/admin_app/bower_components/angular-resource/angular-resource.min.js')
+        script(src='/admin_app/bower_components/angular-animate/angular-animate.min.js')
+        script(src='/admin_app/bower_components/angular-messages/angular-messages.min.js')
+        script(src='/admin_app/bower_components/bootstrap/dist/js/bootstrap.min.js')
+        script(src='/admin_app/bower_components/angular-i18n/angular-locale_pl.js')
+        script(src='/admin_app/bower_components/api-check/dist/api-check.min.js')
+        script(src='/admin_app/bower_components/angular-formly/dist/formly.min.js')
+        script(src='/admin_app/bower_components/angular-formly-templates-bootstrap/dist/angular-formly-templates-bootstrap.min.js')
+        script(src='/admin_app/bower_components/json3/lib/json3.min.js')
+        script(src='/admin_app/bower_components/oclazyload/dist/ocLazyLoad.min.js')
+        script(src='/admin_app/bower_components/angular-loading-bar/build/loading-bar.min.js')
+        script(src='/admin_app/bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js')
+        script(src='/admin_app/bower_components/metisMenu/dist/metisMenu.min.js')
+        script(src='/admin_app/bower_components/angular-growl/build/angular-growl.js')
+        script(src='/admin_app/bower_components/Chart.js/Chart.min.js')
+
+        // admin module
+        script(src='/admin_app/app/admin/admin.module.js')
+
+        script(src='/admin_app/app/admin/directives/header/header.js')
+        script(src='/admin_app/app/admin/directives/header/header-notification/header-notification.js')
+        script(src='/admin_app/app/admin/directives/sidebar/sidebar.js')
+
+        // dashboard module
+        script(src='/admin_app/app/dashboard/dashboard.module.js')
+
+        //users module
+        script(src='/admin_app/app/users/users.module.js')
+
+        //blog module
+        script(src='/admin_app/app/blog/blog.module.js')
+
+        //shared
+        script(src='/admin_app/app/shared/shared.module.js')
+        script(src='/admin_app/app/shared/controllers/base.controller.js')
+        script(src='/admin_app/app/shared/controllers/form.controller.js')
+        script(src='/admin_app/app/shared/controllers/list.controller.js')
+        script(src='/admin_app/app/shared/constants/config.constants.js')
+        script(src='/admin_app/app/shared/directives/table/table.js')
+        script(src='/admin_app/app/shared/directives/table/cell-value/cell-value.js')
+        script(src='/admin_app/app/shared/directives/icon-checkbox/icon-checkbox.js')
+        script(src='/admin_app/app/shared/filters/hide-password.filter.js')
+
+
+        script(src='/admin_app/js/sb-admin-2.js')
