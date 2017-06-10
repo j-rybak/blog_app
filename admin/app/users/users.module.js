@@ -22,14 +22,6 @@ angular
                     title: function () {
                         return "Users";
                     },
-                    loadMyFiles: ['$ocLazyLoad',function ($ocLazyLoad) {
-                        return $ocLazyLoad.load({
-                            name: 'admin.users',
-                            files: [
-                                Config.staticPrefix + 'app/users/factories/users.factory.js',
-                            ]
-                        })
-                    }]
                 }
 
             })
@@ -54,7 +46,7 @@ angular
                 }
             })
             .state('users.edit', {
-                url: '/edit/:id',
+                url: '/:id',
                 controller: 'FormCtrl',
                 templateUrl: Config.staticPrefix + 'views/shared/form.html',
                 resolve: {

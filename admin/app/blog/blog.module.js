@@ -8,7 +8,7 @@ angular
 
         $ocLazyLoadProvider.config({
             debug: false,
-            events: true,
+            events: true
         });
 
         $stateProvider
@@ -20,16 +20,7 @@ angular
                 resolve: {
                     title: function () {
                         return "Blog";
-                    },
-                    loadMyFiles: ['$ocLazyLoad', function ($ocLazyLoad) {
-                        return $ocLazyLoad.load({
-                            name: 'admin.blog',
-                            files: [
-                                Config.staticPrefix + 'app/blog/factories/posts.factory.js',
-                                Config.staticPrefix + 'app/blog/factories/comments.factory.js'
-                            ]
-                        })
-                    }]
+                    }
                 }
 
             })
@@ -40,7 +31,7 @@ angular
                 resolve: {
                     resourceFactory: ['PostsFactory', function (PostsFactory) {
                         return PostsFactory
-                    }],
+                    }]
                 }
             })
             .state('blog.posts-edit', {
@@ -50,7 +41,7 @@ angular
                 resolve: {
                     resourceFactory: ['PostsFactory', function (PostsFactory) {
                         return PostsFactory
-                    }],
+                    }]
                 }
             })
             .state('blog.comments-list', {
@@ -60,7 +51,7 @@ angular
                 resolve: {
                     resourceFactory: ['CommentsFactory', function (CommentsFactory) {
                         return CommentsFactory
-                    }],
+                    }]
                 }
             })
             .state('blog.comments-edit', {
@@ -70,7 +61,7 @@ angular
                 resolve: {
                     resourceFactory: ['CommentsFactory', function (CommentsFactory) {
                         return CommentsFactory
-                    }],
+                    }]
                 }
             });
             $urlRouterProvider.otherwise('/blog/posts');

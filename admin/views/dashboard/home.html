@@ -3,8 +3,8 @@
     <div class="row">
 
         <stats number="{{counts.users ||0}}" comments="Użytkowników" colour="primary" type="user" goto="users.list"></stats>
-        <stats number="{{counts.posts ||0}}" comments="Postów" colour="yellow" type="pencil"></stats>
-        <stats number="{{counts.comments || 0}}" comments="Komenatrzy" colour="red" type="comments"></stats>
+        <stats number="{{counts.posts ||0}}" comments="Postów" colour="yellow" type="pencil" goto="blog.posts-list"></stats>
+        <stats number="{{counts.comments || 0}}" comments="Komenatrzy" colour="red" type="comments" goto="blog.comments-list"></stats>
 
     </div>
 </div>

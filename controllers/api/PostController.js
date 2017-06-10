@@ -88,7 +88,7 @@ module.exports = {
             Post.image = req.body.image ? req.body.image : Post.image;
             Post.owner = req.body.owner ? req.body.owner : Post.owner;
 
-            Post.update(function (err, Post) {
+            Post.save(function (err, Post) {
                 if (err) {
                     return res.status(500).json({
                         message: 'Error when updating Post.',
