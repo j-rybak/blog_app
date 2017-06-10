@@ -20,7 +20,7 @@
 
 
     </head>
-   
+
     <body>
 
     <div ng-app="admin">
@@ -46,30 +46,51 @@
     </div>
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/angular/angular.min.js"></script>
-    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.min.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.min.js"></script>
+    <script src="bower_components/angular-messages/angular-messages.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="bower_components/angular-i18n/angular-locale_pl.js"></script>
+    <script src="bower_components/api-check/dist/api-check.min.js"></script>
+    <script src="bower_components/angular-formly/dist/formly.min.js"></script>
+    <script src="bower_components/angular-formly-templates-bootstrap/dist/angular-formly-templates-bootstrap.min.js"></script>
     <script src="bower_components/json3/lib/json3.min.js"></script>
     <script src="bower_components/oclazyload/dist/ocLazyLoad.min.js"></script>
     <script src="bower_components/angular-loading-bar/build/loading-bar.min.js"></script>
     <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
     <script src="bower_components/metisMenu/dist/metisMenu.min.js"></script>
+    <script src="bower_components/angular-growl/build/angular-growl.js"></script>
     <script src="bower_components/Chart.js/Chart.min.js"></script>
-
-    <!-- admin app -->
+    <!-- admin module-->
     <script src="app/admin/admin.module.js"></script>
     <script src="app/admin/directives/header/header.js"></script>
     <script src="app/admin/directives/header/header-notification/header-notification.js"></script>
     <script src="app/admin/directives/sidebar/sidebar.js"></script>
-
-    <!-- dashboard app -->
+    <!-- dashboard module-->
     <script src="app/dashboard/dashboard.module.js"></script>
-
-
+    <!--users module-->
+    <script src="app/users/users.module.js"></script>
+    <script src="app/users/factories/users.factory.js"></script>
+    <!--blog module-->
+    <script src="app/blog/blog.module.js"></script>
+    <script src="app/blog/factories/posts.factory.js"></script>
+    <script src="app/blog/factories/comments.factory.js"></script>
+    <!--shared-->
+    <script src="app/shared/shared.module.js"></script>
+    <script src="app/shared/controllers/base.controller.js"></script>
+    <script src="app/shared/controllers/form.controller.js"></script>
+    <script src="app/shared/controllers/list.controller.js"></script>
+    <!--<script src="app/shared/constants/config.constants.js"></script>-->
+    <script src="app/shared/directives/table/table.js"></script>
+    <script src="app/shared/directives/table/cell-value/cell-value.js"></script>
+    <script src="app/shared/directives/icon-checkbox/icon-checkbox.js"></script>
+    <script src="app/shared/filters/hide-password.filter.js"></script>
     <script src="js/sb-admin-2.js"></script>
     <!-- Config for standalone version if running with node app loads config form /admin/app/admin/constant/config.constants.js -->
     <script>
         angular.module('admin.shared').constant('Config', {
-            api: 'Hello',
+            api: 'https://blog-app-web.herokuapp.com',
             staticPrefix: ''
         });
     </script>

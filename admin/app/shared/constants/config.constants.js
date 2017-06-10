@@ -1,4 +1,4 @@
 angular.module('admin.shared').constant('Config', {
-    api: 'Hello',
+    api: '',
     staticPrefix: '/admin_app/'
 });

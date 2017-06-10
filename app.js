@@ -17,7 +17,10 @@ var postsApi = require('./routes/api/PostRoutes');
 var commentsApi = require('./routes/api/CommentRoutes');
 var dashboardApi = require('./routes/api/DashboardRoutes');
 
+var cors = require('cors');
 var app = express();
+
+app.use(cors());
 
 var db = require('./utils/dbSettings');
 

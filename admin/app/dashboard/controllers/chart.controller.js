@@ -1,8 +1,10 @@
 'use strict';
 
 angular.module('admin.dashboard')
-    .controller('ChartCtrl', ['$scope', '$resource', 'growl', function ($scope, $resource, growl) {
-        var Counts = $resource('/api/dashboard/counts');
+    .controller('ChartCtrl', ['$scope', '$resource', 'growl',  function ($scope, $resource, Config) {
+        var apiUrl = Config.api+'/api/dashboard/counts';
+        console.log(apiUrl);
+        var Counts = $resource(apiUrl);
         $scope.dynamic = {
             labels: [],
             data: [],
