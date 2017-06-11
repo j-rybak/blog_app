@@ -2,9 +2,7 @@
 
 angular.module('admin.dashboard')
     .controller('ChartCtrl', ['$scope', '$resource', 'growl',  function ($scope, $resource, Config) {
-        var apiUrl = Config.api+'/api/dashboard/counts';
-        console.log(apiUrl);
-        var Counts = $resource(apiUrl);
+        var Counts = $resource(Config.api+'/api/dashboard/counts');
         $scope.dynamic = {
             labels: [],
             data: [],

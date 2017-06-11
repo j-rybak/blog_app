@@ -1,13 +1,13 @@
 'use strict';
 
 angular.module('admin.shared')
-    .controller('FormCtrl', ['$scope', '$resource', '$state', '$stateParams', 'growl', 'resourceFactory',
-        function ($scope, $resource, $state, $stateParams, growl, resourceFactory) {
+    .controller('FormCtrl', ['$scope', '$resource', '$state', '$stateParams', 'growl', 'resourceFactory', 'Config',
+        function ($scope, $resource, $state, $stateParams, growl, resourceFactory, Config) {
             $scope.resourceConfig = resourceFactory;
             $scope.submit = submit;
             $scope.remove = remove;
 
-            var ItemResource = $resource($scope.resourceConfig.url, {id: '@_id'}, {update: {method: 'PUT'}});
+            var ItemResource = $resource(Config.api+$scope.resourceConfig.url, {id: '@_id'}, {update: {method: 'PUT'}});
 
 
             function init() {
