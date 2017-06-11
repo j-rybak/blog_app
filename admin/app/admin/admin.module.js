@@ -12,6 +12,7 @@ angular
         'formly',
         'formlyBootstrap',
         'ngMessages',
+        'chart.js',
         'admin.dashboard',
         'admin.users',
         'admin.blog',

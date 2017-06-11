@@ -12,6 +12,8 @@ html.no-js
         link(rel='stylesheet', href='/admin_app/bower_components/metisMenu/dist/metisMenu.min.css')
         link(rel='stylesheet', href='/admin_app/bower_components/angular-loading-bar/build/loading-bar.min.css')
         link(rel='stylesheet', href='/admin_app/bower_components/font-awesome/css/font-awesome.min.css', type='text/css')
+        link(rel='stylesheet', href='/admin_app/bower_components/angular-chart.js/dist/angular-chart.css', type='text/css')
+
     body
         div(ng-app='admin')
             #wrapper
@@ -40,6 +42,8 @@ html.no-js
         script(src='/admin_app/bower_components/metisMenu/dist/metisMenu.min.js')
         script(src='/admin_app/bower_components/angular-growl/build/angular-growl.js')
         script(src='/admin_app/bower_components/Chart.js/Chart.min.js')
+        script(src='/admin_app/bower_components/angular-chart.js/dist/angular-chart.min.js')
+
 
         // admin module
         script(src='/admin_app/app/admin/admin.module.js')
@@ -50,7 +54,9 @@ html.no-js
 
         // dashboard module
         script(src='/admin_app/app/dashboard/dashboard.module.js')
-
+        script(src='/admin_app/app/dashboard/controllers/chart.controller.js')
+        script(src='/admin_app/app/dashboard/controllers/dashboard.controller.js')
+        script(src='/admin_app/app/dashboard/directives/stats/stats.js')
 
         //users module
         script(src='/admin_app/app/users/users.module.js')
