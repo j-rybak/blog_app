@@ -8,18 +8,8 @@ angular.module('admin.shared')
                 format:'=',
                 link:'=',
             },
-            controller: ['$scope', '$state', function ($scope, $state) {
-                $scope.ordering = "";
-                $scope.editUrl = function(params){
-                    return $state.href($scope.edit, params)
-                };
-                $scope.changeOrder = function(fieldKey){
-                    if($scope.ordering===fieldKey){
-                        $scope.ordering= $scope.ordering.indexOf('-') !== -1 ? fieldKey : '-' + fieldKey;
-                    }else{
-                        $scope.ordering= fieldKey;
-                    }
-                }
+            controller: ['$scope',  function ($scope) {
+                $scope.value = $scope.value === undefined? "-": $scope.value;
 
             }]
         }
